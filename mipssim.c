@@ -27,16 +27,18 @@ uint8_t get_instruction_type(int opcode)
             return R_TYPE;
         case ADD:
             return R_TYPE;
-        case R_INST:
+        case ADDI:
+            return I_TYPE;
+        case SLT:
             return R_TYPE;
-        case R_INST:
-            return R_TYPE;
-        case R_INST:
-            return R_TYPE;
-        case EOP:
-            return EOP_TYPE;
-        case BEQ;
+        case LW:
+            return MEM_TYPE;
+        case SW:
+            return MEM_TYPE;
+        case BEQ:
             return BRANCH_TYPE;
+        case J:
+            return JUMP_TYPE;
         ///@students task 1: fill in the rest
 
         default:
